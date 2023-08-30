@@ -13,13 +13,13 @@ cuponForm.addEventListener('submit', function (event) {
     storedCupons = [];
 
     for (let i = 1; i <= quantidade; i++) {
-      const cuponText = `<b>Promoção de natal</b>: ${i}
+      const cuponText = `<span style="font-size: 14px;"><b>Promoção de natal</b>: ${i}</span>
       <hr>
-      <span style="font-size: 16px; font-weight: bold;">Cliente: ${cliente} </span>
+      <span style="font-size: 12px; font-weight: bold;">Cliente: ${cliente} </span>
       <br>
-      <span style="font-size: 10px;">Concorra a mil reais em impressões digitais</span>
+      <span style="font-size: 7.5px;">Concorra a mil reais em impressões digitais</span>
       <br>
-      <span style="font-size: 14px;">Data do sorteio: 23/12/2023</span>`;
+      <span style="font-size: 12px;">Data do sorteio: 23/12/2023</span>`;
       storedCupons.push(cuponText);
     }
 
@@ -28,5 +28,8 @@ cuponForm.addEventListener('submit', function (event) {
 });
 
 function updateCuponsDisplay() {
-  cuponsContainer.innerHTML = storedCupons.map(cupon => `<div class="cupon-card">${cupon}</div>`).join('');
+  cuponsContainer.innerHTML = `<div class="cupon-container">${storedCupons
+    .map(cupon => `<div class="cupon-card">${cupon}</div>`)
+    .join('')}</div>`;
 }
+

@@ -18,6 +18,8 @@
         width: 90%;
         max-width: 400px;
         margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .title-bar {
@@ -83,20 +85,26 @@
       }
 
       #cupons {
-        margin-top: 30px;
-        margin-right: 25px;
+        margin-top: 10px;
       }
 
-      .cupon-card {
+      
+     .cupon-card {
         background-color: #fff;
-        border: 1px solid black;
+        border: 1px dashed black;
         padding: 15px;
-        margin: 0;
-        text-align: center;
-        width: 80%;
-        margin-left: 35px;
-        margin-bottom: 10px;
+        width: calc(50% - 2px); /* Divide em duas colunas sem margens laterais */
+        box-sizing: border-box;
       }
+      
+
+     .cupon-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0; /* Adiciona margem negativa para compensar as margens internas */
+      }
+
 
       .print-button {
         margin-top: 20px;
