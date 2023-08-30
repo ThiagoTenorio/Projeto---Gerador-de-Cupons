@@ -116,8 +116,31 @@
       }
 
       .logo {
-      width: 80px;
+      width: 60px;
       height: auto;
       margin-top: 5px;
     }
+
+    @media print {
+      body {
+        background-color: #fff; /* Defina a cor de fundo desejada para a impressão */
+      }
+
+      .print-cupons {
+        display: block !important;
+      }
+
+     .print-cupons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+      .print-button {
+        margin-top: 20px; 
+        align-items: center;
+      }
+    }
+
    

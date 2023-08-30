@@ -13,7 +13,9 @@ cuponForm.addEventListener('submit', function (event) {
     storedCupons = [];
 
     for (let i = 1; i <= quantidade; i++) {
-      const cuponText = `<span style="font-size: 14px;"><b>Promoção de natal</b>: ${i}</span>
+      const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo" style="width: 25px"/> 
+      <br> 
+      <span style="font-size: 12px;"><b>Promoção de Natal:</b> ${i}</span>
       <hr>
       <span style="font-size: 12px; font-weight: bold;">Cliente: ${cliente} </span>
       <br>
@@ -24,12 +26,32 @@ cuponForm.addEventListener('submit', function (event) {
     }
 
     updateCuponsDisplay();
+
+    printButton.style.display = 'block';
   }
 });
+
 
 function updateCuponsDisplay() {
   cuponsContainer.innerHTML = `<div class="cupon-container">${storedCupons
     .map(cupon => `<div class="cupon-card">${cupon}</div>`)
     .join('')}</div>`;
 }
+
+const printButton = document.getElementById('printButton');
+
+printButton.addEventListener('click', function () {
+  // Mostrar a div que contém os cupons a serem impressos
+  printCupons.style.display = 'block';
+
+  // Ocultar o botão de impressão para que ele não seja impresso
+  printButton.style.display = 'none';
+
+  // Chamar a função de impressão
+  window.print();
+
+  // Restaurar a exibição normal após a impressão
+  printCupons.style.display = 'none';
+  printButton.style.display = 'block';
+});
 
