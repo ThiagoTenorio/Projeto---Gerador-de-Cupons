@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Promoção de Natal</title>
+    <link rel="icon" href="./img/Logo - Grafica.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo" />
+      <!-- Substitua 'caminho-para-sua-logo.png' pelo caminho real da sua logo -->
+
+      <h1>Promoção de Natal</h1>
+      <div class="title-bar"></div>
+      <form id="cuponForm">
+        <label for="cliente">Nome do Cliente (3-12 caracteres):</label>
+        <input
+          type="text"
+          id="cliente"
+          pattern=".{3,12}"
+          title="Deve conter entre 3 e 12 caracteres"
+          required
+        /><br />
+
+        <label for="quantidade">Quantidade de Cupons:</label>
+        <input type="number" id="quantidade" min="1" required /><br />
+
+        <button type="submit">Gerar Cupons</button>
+      </form>
+
+      <div id="cupons"></div>
+      <div class="print-cupons" id="printCupons"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
