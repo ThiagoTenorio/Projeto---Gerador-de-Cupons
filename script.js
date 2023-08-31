@@ -15,7 +15,7 @@ cuponForm.addEventListener('submit', function (event) {
     for (let i = 1; i <= quantidade; i++) {
       const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo" style="width: 25px"/> 
       <br> 
-      <span style="font-size: 12px;"><b>Promoção de Natal:</b> ${i}</span>
+      <span style="font-size: 12px;"><b>Promoção de Natal</b></span>
       <hr>
       <span style="font-size: 12px; font-weight: bold;">Cliente: ${cliente} </span>
       <br>
