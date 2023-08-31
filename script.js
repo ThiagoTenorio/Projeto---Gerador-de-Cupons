@@ -15,13 +15,13 @@ cuponForm.addEventListener('submit', function (event) {
     for (let i = 1; i <= quantidade; i++) {
       const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo" style="width: 25px"/> 
       <br> 
-      <span style="font-size: 12px;"><b>Promoção de Natal</b></span>
+      <span style="font-size: 12px;"><b>PROMOÇÃO DE NATAL</b></span>
       <hr>
       <span style="font-size: 12px; font-weight: bold;">Cliente: ${cliente} </span>
       <br>
       <span style="font-size: 7.5px;">Concorra a mil reais em impressões digitais</span>
       <br>
-      <span style="font-size: 12px;">Data do sorteio: 23/12/2023</span>`;
+      <span style="font-size: 10px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>`;
       storedCupons.push(cuponText);
     }
 
