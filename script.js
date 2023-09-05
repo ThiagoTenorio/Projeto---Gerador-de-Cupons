@@ -13,17 +13,27 @@ cuponForm.addEventListener('submit', function (event) {
     storedCupons = [];
 
     for (let i = 1; i <= quantidade; i++) {
-      const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo" style="width: 25px"/> 
-      <br> 
-      <span style="font-size: 12px;"><b>PROMOÇÃO DE NATAL</b></span>
+      const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 35px"/> 
+      <br><br>  
+      <span style="font-size: 22px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
       <hr>
-      <span style="font-size: 12px; font-weight: bold;">Cliente: ${cliente} </span>
+      <br><br> 
+      <span style="font-size: 22px; font-weight: bold;">Cliente: ${cliente} </span>
+      <br><br><br> 
+      <span style="font-size: 12px; margin-bottom: 10px;">Concorra a mil reais em impressões digitais</span>
       <br>
-      <span style="font-size: 7.5px;">Concorra a mil reais em impressões digitais</span>
-      <br>
-      <span style="font-size: 10px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>`;
+      <span style="font-size: 15px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>`;
       storedCupons.push(cuponText);
     }
+
+    // Adicionar uma classe à logo do formulário
+    const formLogo = document.querySelector('.logo');
+    formLogo.classList.add('logo-form');
+
+    // Use CSS para ocultar a logo do formulário na página de impressão
+    const styleSheet = document.styleSheets[0]; // Obtenha a primeira folha de estilo (pode precisar ajustar isso se tiver várias folhas de estilo)
+    styleSheet.insertRule('@media print { .logo-form { display: none; } }', 0);
+
 
     updateCuponsDisplay();
 
@@ -47,11 +57,15 @@ printButton.addEventListener('click', function () {
   // Ocultar o botão de impressão para que ele não seja impresso
   printButton.style.display = 'none';
 
+  // Ocultar o formulário (opcional, mas geralmente faz sentido)
+  cuponForm.style.display = 'none';
+
   // Chamar a função de impressão
   window.print();
 
   // Restaurar a exibição normal após a impressão
   printCupons.style.display = 'none';
   printButton.style.display = 'block';
+  cuponForm.style.display = 'block'; // Restaurar a exibição do formulário (opcional)
 });
 

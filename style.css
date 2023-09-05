@@ -88,23 +88,22 @@
         margin-top: 10px;
       }
 
-      
      .cupon-card {
         background-color: #fff;
         border: 1px dashed black;
-        padding: 15px;
-        width: calc(50% - 2px); /* Divide em duas colunas sem margens laterais */
+        padding-top: 25px;
+        width: 80mm; /* Define a largura para 80mm */
+        height: 80mm; /* Define a altura para 80mm */
         box-sizing: border-box;
       }
       
-
      .cupon-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0; /* Adiciona margem negativa para compensar as margens internas */
+        justify-content: center;
+        margin: 0;
+        width: 100%; /* Ajusta a largura da container para 100% */
       }
-
 
       .print-button {
         margin-top: 20px;
@@ -142,5 +141,27 @@
         align-items: center;
       }
     }
+      @media print {
+        /* Estilos para a página de impressão */
+        body {
+          background-color: #fff; /* Defina a cor de fundo desejada para a impressão */
+        }
+
+        .print-cupons {
+          display: block !important;
+        }
+
+        .print-button,
+        form {
+          display: none; /* Oculta o botão de impressão e o formulário na impressão */
+        }
+
+        /* Adicione qualquer outro estilo desejado para a página de impressão */
+        
+        h1 {
+          display: none; /* Oculta o título "Promoção de Natal" e o título da logomarca na página de impressão */
+        }
+      }
+    
 
    
