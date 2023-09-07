@@ -90,9 +90,9 @@
 
      .cupon-card {
         background-color: #fff;
-        border: 1px dashed black;
+        /* border: 1px dashed black; */
         padding-top: 25px;
-        width: 80mm; /* Define a largura para 80mm */
+        width: 100mm; /* Define a largura para 80mm */
         height: 297mm; /* Define a altura para 80mm */
         box-sizing: border-box;
       }

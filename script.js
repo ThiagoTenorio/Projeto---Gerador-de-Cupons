@@ -13,16 +13,20 @@ cuponForm.addEventListener('submit', function (event) {
     storedCupons = [];
 
     for (let i = 1; i <= quantidade; i++) {
-      const cuponText = `<img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 35px"/> 
-      <br><br>  
-      <span style="font-size: 22px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
+      const cuponText = `
+       <br><br><br><br><br><br> 
+      <img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 150px"/> 
+      <br><br><br><br>    
+      <span style="font-size: 30px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
       <hr>
+      <br><br><br><br><br><br> 
+      <span style="font-size: 30px; font-weight: bold;">Cliente: ${cliente} </span>
+      <br><br><br><br><br><br><br>  
+      <span style="font-size: 18px; margin-bottom: 10px;">Concorra a mil reais em impressões digitais</span>
       <br><br> 
-      <span style="font-size: 22px; font-weight: bold;">Cliente: ${cliente} </span>
-      <br><br><br> 
-      <span style="font-size: 12px; margin-bottom: 10px;">Concorra a mil reais em impressões digitais</span>
-      <br>
-      <span style="font-size: 15px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>`;
+      <span style="font-size: 22px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>
+      <br><br><br><br><br><br><br><br><br><br><br> 
+      <span style="font-size: 50px;"><b>BOA SORTE</b></span>`;
       storedCupons.push(cuponText);
     }
 
