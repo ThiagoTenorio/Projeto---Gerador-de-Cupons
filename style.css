@@ -2,7 +2,7 @@
      body {
         font-family: Arial, sans-serif;
         background-color: #808080;
-        margin: 40px;
+        margin: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -17,7 +17,7 @@
         padding: 40px;
         width: 90%;
         max-width: 400px;
-        margin-top: 20px;
+        margin-top: 0px;
         margin-left: 0;
         margin-right: 0;
       }
@@ -35,7 +35,7 @@
       }
 
       form {
-       margin-top: 40px;
+       margin-top: 20px;
        margin-right: 10px;
       
       }
@@ -88,21 +88,20 @@
         margin-top: 10px;
       }
 
-     .cupon-card {
+    .cupon-card {
         background-color: #fff;
-        /* border: 1px dashed black; */
-        padding-top: 25px;
-        width: 100mm; /* Define a largura para 80mm */
-        height: 297mm; /* Define a altura para 80mm */
+        padding-top: 5px;
+        width: 100mm;
+        height: 88mm; /* Ajuste a altura para imprimir 3 cupons por folha */
         box-sizing: border-box;
+        margin-left: 11px;
+        margin-bottom: 15px; /* Adicione uma margem inferior entre os cupons */
       }
-      
-     .cupon-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    .cupon-container {
+        display: block; /* Altere para "block" para imprimir os cupons um abaixo do outro */
         margin: 0;
-        width: 100%; /* Ajusta a largura da container para 100% */
+        width: 100%;
       }
 
       .print-button {
@@ -111,7 +110,7 @@
 
       .print-cupons {
         display: none;
-        margin-top: 20px;
+        margin-top: 0px;
       }
 
       .logo {
@@ -129,18 +128,19 @@
         display: block !important;
       }
 
-     .print-cupons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-      .print-button {
-        margin-top: 20px; 
+      .print-cupons {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
       }
-    }
+
+        .print-button {
+          margin-top: 0px; 
+          align-items: center;
+        }
+      }
+
       @media print {
         /* Estilos para a página de impressão */
         body {
@@ -161,7 +161,11 @@
         h1 {
           display: none; /* Oculta o título "Promoção de Natal" e o título da logomarca na página de impressão */
         }
-      }
-    
 
-   
+        .cupon-card {
+        width: 100%; /* Para ocupar toda a largura da página de impressão */
+        margin: 0;
+        }
+      }
+
+      

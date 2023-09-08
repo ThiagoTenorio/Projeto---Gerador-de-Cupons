@@ -14,19 +14,17 @@ cuponForm.addEventListener('submit', function (event) {
 
     for (let i = 1; i <= quantidade; i++) {
       const cuponText = `
-       <br><br><br><br><br><br> 
-      <img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 150px"/> 
-      <br><br><br><br>    
+      <img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 60px"/> 
+      <br><br>    
       <span style="font-size: 30px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
-      <hr>
-      <br><br><br><br><br><br> 
+      <hr><br>
       <span style="font-size: 30px; font-weight: bold;">Cliente: ${cliente} </span>
-      <br><br><br><br><br><br><br>  
-      <span style="font-size: 18px; margin-bottom: 10px;">Concorra a mil reais em impressões digitais</span>
+      <br><br><br>
+      <span style="font-size: 18px;">Concorra a mil reais em impressões digitais</span>
       <br><br> 
       <span style="font-size: 22px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>
-      <br><br><br><br><br><br><br><br><br><br><br> 
-      <span style="font-size: 50px;"><b>BOA SORTE</b></span>`;
+      <br><br>
+      <hr size="1" style="border:1px dashed black;">`;
       storedCupons.push(cuponText);
     }
 
@@ -72,4 +70,3 @@ printButton.addEventListener('click', function () {
   printButton.style.display = 'block';
   cuponForm.style.display = 'block'; // Restaurar a exibição do formulário (opcional)
 });
-
