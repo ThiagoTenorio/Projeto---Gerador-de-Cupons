@@ -16,14 +16,14 @@ cuponForm.addEventListener('submit', function (event) {
       const cuponText = `
       <img src="./img/Logo - Grafica.png" alt="Logo Marca" class="logo-cupon" style="width: 60px"/> 
       <br><br>    
-      <span style="font-size: 30px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
+      <span style="font-size: 25px; padding-top: 20px;"><b>PROMOÇÃO DE NATAL</b></span>
       <hr><br>
-      <span style="font-size: 30px; font-weight: bold;">Cliente: ${cliente} </span>
+      <span style="font-size: 25px; font-weight: bold;">Cliente: ${cliente} </span>
       <br><br><br>
-      <span style="font-size: 18px;">Concorra a mil reais em impressões digitais</span>
-      <br><br> 
-      <span style="font-size: 22px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>
-      <br><br>
+      <span style="font-size: 15px;">Concorra a mil reais em impressões digitais</span>
+      <br>
+      <span style="font-size: 20px;"><b>DATA DO SORTEIO: 23/12/2023</b></span>
+      <br><br><br>
       <hr size="1" style="border:1px dashed black;">`;
       storedCupons.push(cuponText);
     }
@@ -45,9 +45,7 @@ cuponForm.addEventListener('submit', function (event) {
 
 
 function updateCuponsDisplay() {
-  cuponsContainer.innerHTML = `<div class="cupon-container">${storedCupons
-    .map(cupon => `<div class="cupon-card">${cupon}</div>`)
-    .join('')}</div>`;
+  cuponsContainer.innerHTML = `<div class="cupon-container">${storedCupons.join('')}</div>`;
 }
 
 const printButton = document.getElementById('printButton');

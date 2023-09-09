@@ -91,11 +91,11 @@
     .cupon-card {
         background-color: #fff;
         padding-top: 5px;
-        width: 100mm;
-        height: 88mm; /* Ajuste a altura para imprimir 3 cupons por folha */
+        width: 80mm;
+        height: 297mm; /* Ajuste a altura para imprimir 3 cupons por folha */
         box-sizing: border-box;
-        margin-left: 11px;
-        margin-bottom: 15px; /* Adicione uma margem inferior entre os cupons */
+        margin-left: 48px;
+        margin-bottom: 0; /* Adicione uma margem inferior entre os cupons */
       }
 
     .cupon-container {
